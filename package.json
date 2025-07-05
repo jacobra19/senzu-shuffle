@@ -1,6 +1,6 @@
 {
   "name": "senzu-shuffle",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -33,7 +33,7 @@
   "description": "",
   "files": [
     "dist"
-  ],,
+  ],
   "devDependencies": {
     "@types/node": "^24.0.10",
     "@types/seedrandom": "^3.0.8",
@@ -43,4 +43,4 @@
   "dependencies": {
     "seedrandom": "^3.0.5"
   }
-}
+} 
