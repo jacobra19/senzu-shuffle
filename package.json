@@ -17,7 +17,12 @@
     "test": "vitest",
     "test:watch": "vitest --watch",
     "typecheck": "tsc --noEmit",
-    "dev": "vitest --watch"
+    "dev": "vitest --watch",
+    "lint": "eslint src/**/*.ts",
+    "lint:fix": "eslint src/**/*.ts --fix",
+    "format": "prettier --write src/**/*.ts",
+    "format:check": "prettier --check src/**/*.ts",
+    "prepare": "husky"
   },
   "engines": {
     "node": ">=18.0.0"
@@ -36,7 +41,15 @@
     "url": "https://github.com/jacobra19/senzu-shuffle/issues"
   },
   "homepage": "https://github.com/jacobra19/senzu-shuffle#readme",
-  "keywords": ["shuffle", "deterministic", "seeded", "fisher-yates", "array", "random", "typescript"],
+  "keywords": [
+    "shuffle",
+    "deterministic",
+    "seeded",
+    "fisher-yates",
+    "array",
+    "random",
+    "typescript"
+  ],
   "description": "A deterministic array shuffling utility using seeded Fisher-Yates algorithm",
   "files": [
     "dist"
@@ -44,10 +57,25 @@
   "devDependencies": {
     "@types/node": "^24.0.10",
     "@types/seedrandom": "^3.0.8",
+    "@typescript-eslint/eslint-plugin": "^8.36.0",
+    "@typescript-eslint/parser": "^8.36.0",
+    "eslint": "^9.31.0",
+    "eslint-config-prettier": "^10.1.5",
+    "eslint-plugin-prettier": "^5.5.1",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.2",
+    "prettier": "^3.6.2",
     "typescript": "^5.8.3",
     "vitest": "^3.2.4"
   },
   "dependencies": {
     "seedrandom": "^3.0.5"
+  },
+  "lint-staged": {
+    "src/**/*.ts": [
+      "eslint --fix",
+      "prettier --write",
+      "git add"
+    ]
   }
-} 
+}

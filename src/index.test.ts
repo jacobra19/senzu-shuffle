@@ -50,31 +50,45 @@ describe('shuffle', () => {
   // Error handling tests
   describe('error handling', () => {
     it('should throw error for empty seed', () => {
-      expect(() => shuffle('', [1, 2, 3])).toThrow('Seed must be a non-empty string');
+      expect(() => shuffle('', [1, 2, 3])).toThrow(
+        'Seed must be a non-empty string'
+      );
     });
 
     it('should throw error for null seed', () => {
-      expect(() => shuffle(null as any, [1, 2, 3])).toThrow('Seed must be a non-empty string');
+      expect(() => shuffle(null as any, [1, 2, 3])).toThrow(
+        'Seed must be a non-empty string'
+      );
     });
 
     it('should throw error for undefined seed', () => {
-      expect(() => shuffle(undefined as any, [1, 2, 3])).toThrow('Seed must be a non-empty string');
+      expect(() => shuffle(undefined as any, [1, 2, 3])).toThrow(
+        'Seed must be a non-empty string'
+      );
     });
 
     it('should throw error for non-string seed', () => {
-      expect(() => shuffle(123 as any, [1, 2, 3])).toThrow('Seed must be a non-empty string');
+      expect(() => shuffle(123 as any, [1, 2, 3])).toThrow(
+        'Seed must be a non-empty string'
+      );
     });
 
     it('should throw error for non-array input', () => {
-      expect(() => shuffle('seed', 'not-array' as any)).toThrow('Second argument must be an array');
+      expect(() => shuffle('seed', 'not-array' as any)).toThrow(
+        'Second argument must be an array'
+      );
     });
 
     it('should throw error for null array', () => {
-      expect(() => shuffle('seed', null as any)).toThrow('Second argument must be an array');
+      expect(() => shuffle('seed', null as any)).toThrow(
+        'Second argument must be an array'
+      );
     });
 
     it('should throw error for undefined array', () => {
-      expect(() => shuffle('seed', undefined as any)).toThrow('Second argument must be an array');
+      expect(() => shuffle('seed', undefined as any)).toThrow(
+        'Second argument must be an array'
+      );
     });
   });
 });
