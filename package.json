@@ -1,6 +1,6 @@
 {
   "name": "senzu-shuffle",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -14,7 +14,13 @@
   },
   "scripts": {
     "build": "tsc",
-    "test": "vitest"
+    "test": "vitest",
+    "test:watch": "vitest --watch",
+    "typecheck": "tsc --noEmit",
+    "dev": "vitest --watch"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   },
   "repository": {
     "type": "git",
@@ -30,8 +36,8 @@
     "url": "https://github.com/jacobra19/senzu-shuffle/issues"
   },
   "homepage": "https://github.com/jacobra19/senzu-shuffle#readme",
-  "keywords": [],
-  "description": "",
+  "keywords": ["shuffle", "deterministic", "seeded", "fisher-yates", "array", "random", "typescript"],
+  "description": "A deterministic array shuffling utility using seeded Fisher-Yates algorithm",
   "files": [
     "dist"
   ],
